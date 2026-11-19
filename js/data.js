@@ -11,7 +11,7 @@ window.DD_DEFAULT = {
     waVisible: "3498 47 55 90",
     direccion: "Santa Fe 310",
     horario: "Lunes a sábados de 9 a 12:30 y de 17 a 21 h",
-    instagram: "@22doce.decohogar",
+    instagram: "@22doce_decohogar",
     aviso: "Envolvemos tus regalos sin cargo · Retirá en el local o coordinamos el envío",
     linkResena: "https://search.google.com/local/writereview?placeid=TU_PLACE_ID"
   },
