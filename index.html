@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>22doce Deco Hogar · Bazar, regalería y decoración</title>
+  <meta name="description" content="Bazar, regalería y decoración en Santa Fe 310. Detalles que hacen tu hogar más lindo. Comprá online y retirá en el local.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#6B1525">
+  <link rel="icon" href="img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=2">
+</head>
+<body>
+  <a class="skip" href="#catalogo">Saltar al catálogo</a>
+
+  <div class="announce"><p id="aviso"></p></div>
+
+  <header class="header" id="top">
+    <div class="wrap header__in">
+      <a class="brand" href="#top" aria-label="22doce Deco Hogar, inicio">
+        <img src="img/logo-22doce.png" alt="" width="56" height="56">
+        <span class="brand__txt"><b>22doce</b><small>Deco Hogar</small></span>
+      </a>
+      <nav class="nav" id="nav" aria-label="Principal">
+        <a href="#categorias">Categorías</a>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#regalos">Regalos</a>
+        <a href="#resenas">Reseñas</a>
+        <a href="#visitanos">Visitanos</a>
+      </nav>
+      <div class="header__actions">
+        <button class="icon-btn" id="openSearch" aria-label="Buscar productos"></button>
+        <button class="icon-btn cart-btn" id="openCart" aria-label="Abrir carrito"><span class="cart-count" id="cartCount" hidden>0</span></button>
+        <button class="icon-btn menu-btn" id="openMenu" aria-label="Abrir menú" aria-expanded="false"></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- PORTADA -->
+    <section class="hero">
+      <div class="wrap hero__in">
+        <div class="hero__txt reveal">
+          <p class="eyebrow">Bazar · Regalería · Decoración</p>
+          <h1>Detalles que hacen tu hogar <span class="brush">más lindo</span></h1>
+          <p class="lead">Velas, vajilla, textiles y regalos elegidos uno por uno. Armá tu carrito, retiralo en el local o coordinamos el envío.</p>
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#catalogo">Ver catálogo</a>
+            <a class="btn btn--ghost" id="heroWa" target="_blank" rel="noopener">Escribinos</a>
+          </div>
+          <ul class="hero__perks">
+            <li><span id="perk1"></span>Envoltorio de regalo sin cargo</li>
+            <li><span id="perk2"></span>Retiro en Santa Fe 310</li>
+            <li><span id="perk3"></span>Envíos a coordinar</li>
+          </ul>
+        </div>
+        <div class="hero__media reveal">
+          <div class="hero__frame">
+            <img src="img/local-estantes.jpg" alt="Estantes del local con velas, plantas y objetos de decoración" width="314" height="1180">
+          </div>
+          <div class="hero__card hero__card--a">
+            <img src="img/productos/vela-bandeja.jpg" alt="" width="80" height="80">
+            <div><small>Lo más vendido</small><b>Vela de soja con bandeja</b></div>
+          </div>
+          <div class="hero__seal"><img src="img/logo-22doce.png" alt="" width="132" height="132"></div>
+          <p class="hero__hand">¡Te esperamos!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATEGORÍAS -->
+    <section class="section" id="categorias">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <p class="eyebrow">Recorré el local</p>
+          <h2>Categorías</h2>
+        </div>
+        <div class="cats" id="cats"></div>
+      </div>
+    </section>
+
+    <!-- DESTACADOS -->
+    <section class="section section--tint">
+      <div class="wrap">
+        <div class="section__head section__head--row reveal">
+          <div>
+            <p class="eyebrow">Elegidos de la semana</p>
+            <h2>Destacados</h2>
+          </div>
+          <a class="link-arrow" href="#catalogo">Ver todo el catálogo</a>
+        </div>
+        <div class="rail" id="destacados"></div>
+      </div>
+    </section>
+
+    <!-- CATÁLOGO -->
+    <section class="section" id="catalogo">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <p class="eyebrow">Todo lo que tenemos</p>
+          <h2>Catálogo</h2>
+        </div>
+        <div class="toolbar">
+          <div class="chips" id="chips" role="tablist" aria-label="Filtrar por categoría"></div>
+          <div class="toolbar__right">
+            <label class="search">
+              <span class="sr">Buscar</span>
+              <input type="search" id="q" placeholder="Buscar velas, tazas, mantas…" autocomplete="off">
+            </label>
+            <label class="select">
+              <span class="sr">Ordenar</span>
+              <select id="sort">
+                <option value="dest">Destacados</option>
+                <option value="asc">Menor precio</option>
+                <option value="desc">Mayor precio</option>
+                <option value="az">A a Z</option>
+              </select>
+            </label>
+          </div>
+        </div>
+        <p class="result-count" id="count" aria-live="polite"></p>
+        <div class="grid" id="grid"></div>
+      </div>
+    </section>
+
+    <!-- REGALOS -->
+    <section class="gift" id="regalos">
+      <div class="wrap gift__in">
+        <div class="gift__media reveal">
+          <img src="img/productos/regalo-mono.jpg" alt="Regalo envuelto con moño" loading="lazy" width="600" height="600">
+        </div>
+        <div class="gift__txt reveal">
+          <p class="eyebrow eyebrow--light">Regalería</p>
+          <h2>¿No sabés qué regalar? Lo armamos con vos</h2>
+          <p>Contanos para quién es, cuánto querés gastar y qué le gusta. Te proponemos opciones, lo envolvemos sin cargo y le sumamos una tarjeta con tu mensaje.</p>
+          <div class="gift__steps">
+            <div><b>1</b><span>Nos escribís</span></div>
+            <div><b>2</b><span>Elegís una opción</span></div>
+            <div><b>3</b><span>Lo retirás envuelto</span></div>
+          </div>
+          <a class="btn btn--gold" id="giftWa" target="_blank" rel="noopener">Armar un regalo por WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESEÑAS -->
+    <section class="section" id="resenas">
+      <div class="wrap">
+        <div class="reviews-head reveal">
+          <div>
+            <p class="eyebrow">Lo que dicen en Google</p>
+            <h2>Reseñas de clientes</h2>
+          </div>
+          <div class="score">
+            <span class="score__num" id="scoreNum">5,0</span>
+            <div><span id="scoreStars"></span><small id="scoreCount"></small></div>
+          </div>
+        </div>
+        <div class="reviews" id="reviews"></div>
+        <div class="reviews-cta reveal">
+          <p>¿Ya nos visitaste? Tu opinión nos ayuda muchísimo.</p>
+          <a class="btn btn--primary" id="leaveReview" target="_blank" rel="noopener">Dejanos tu reseña en Google</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- VISITANOS -->
+    <section class="section section--tint" id="visitanos">
+      <div class="wrap visit">
+        <div class="visit__txt reveal">
+          <p class="eyebrow">Te esperamos</p>
+          <h2>Visitanos en el local</h2>
+          <ul class="visit__list">
+            <li><span class="visit__ico" data-i="pin"></span><div><b>Dirección</b><span id="vDir"></span></div></li>
+            <li><span class="visit__ico" data-i="clock"></span><div><b>Horario</b><span id="vHor"></span></div></li>
+            <li><span class="visit__ico visit__ico--wa"></span><div><b>WhatsApp</b><span id="vWa"></span></div></li>
+          </ul>
+          <div class="hero__cta">
+            <a class="btn btn--primary" id="vMap" target="_blank" rel="noopener">Cómo llegar</a>
+            <a class="btn btn--ghost" id="vWaBtn" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+          </div>
+        </div>
+        <div class="visit__media reveal">
+          <img src="img/local-detalle.jpg" alt="Detalle de los estantes del local" loading="lazy" width="314" height="620">
+          <img src="img/productos/living.jpg" alt="" loading="lazy" width="600" height="800">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__in">
+      <div class="footer__brand">
+        <img src="img/logo-22doce.png" alt="22doce Deco Hogar" width="72" height="72" loading="lazy">
+        <p>Bazar, regalería y decoración.<br>Detalles que hacen tu hogar más lindo.</p>
+      </div>
+      <div>
+        <h3>Comprar</h3>
+        <ul id="footCats"></ul>
+      </div>
+      <div>
+        <h3>Contacto</h3>
+        <ul>
+          <li id="fDir"></li>
+          <li id="fWa"></li>
+          <li id="fIg"></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap footer__legal">
+      <span>Demo de diseño: productos, precios, fotos y reseñas de ejemplo.</span>
+      <span>Hecho por <a href="https://mirkosistemas.com" target="_blank" rel="noopener">Mirko Sistemas</a> · <a href="admin.html">Panel</a></span>
+    </div>
+  </footer>
+
+  <a class="wa-float" id="waFloat" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp"></a>
+
+  <!-- CARRITO -->
+  <div class="scrim" id="scrim" hidden></div>
+  <aside class="drawer" id="cart" aria-label="Carrito" aria-hidden="true">
+    <div class="drawer__head">
+      <h2>Tu carrito</h2>
+      <button class="icon-btn" id="closeCart" aria-label="Cerrar carrito"></button>
+    </div>
+    <div class="drawer__body" id="cartBody"></div>
+    <div class="drawer__foot" id="cartFoot"></div>
+  </aside>
+
+  <!-- DETALLE DE PRODUCTO -->
+  <dialog class="modal" id="modal" aria-labelledby="mTitle">
+    <button class="icon-btn modal__close" id="closeModal" aria-label="Cerrar"></button>
+    <div class="modal__in" id="modalIn"></div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/data.js?v=2"></script>
+  <script src="js/store.js?v=2"></script>
+  <script src="js/main.js?v=2"></script>
+</body>
+</html>
